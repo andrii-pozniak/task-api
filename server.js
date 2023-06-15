@@ -1,6 +1,6 @@
-const app = require("./src/App");
+const app = require("./App");
 require("dotenv").config();
-const{ connectMongo } = require("./src/db/connection");
+const{ connectMongo } = require("./db/connection");
 
 const start = async() => {
     try {

@@ -6,7 +6,6 @@ const { joiTaskAddSchema } = require("../../schema/validationJoi");
 
 const { getAllTasks, addTask } = require("../../controllers/tasks");
 
-
 router.get("/", ctrlWrapper(getAllTasks));
 
 router.post("/create", validation(joiTaskAddSchema), ctrlWrapper(addTask));
