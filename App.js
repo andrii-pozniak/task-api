@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const taskRouter = require("./routes/api/tasks");
+const authRouter = require("./routes/api/users");
 
 //n7doqVRSiB4MVl8E
 
@@ -10,6 +11,9 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+
+app.use("/api/users", authRouter);
+
 
 app.use("/tasks", taskRouter);
 
