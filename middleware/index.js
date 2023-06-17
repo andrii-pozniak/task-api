@@ -1,5 +1,5 @@
 const validation = require("./validation");
-// const authenticate = require("./authenticate");
+const authenticate = require("./authenticate");
 // const isValidId = require("./isValidId");
 
 // const uploadCloud = require("./cloudinaryUploadMiddleware");
@@ -7,6 +7,6 @@ const validation = require("./validation");
 module.exports = {
   validation,
 //   isValidId,
-//   authenticate,
+  authenticate,
 //   uploadCloud,
 };

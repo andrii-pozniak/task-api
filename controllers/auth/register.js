@@ -1,8 +1,9 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { JWT_SECRET } = process.env;
 const { User } = require("../../schema/userModel");
-// const gravatar = require("gravatar");
+// const JWT_SECRET = "qwertyuiop[";
+require("dotenv").config();
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const register = async (req, res, next) => {
   const { name, email, password } = req.body;
@@ -17,14 +18,13 @@ const register = async (req, res, next) => {
     name,
     email,
     password: hashPassword,
-    // avatarURL: gravatar.url(email),
-    
+   
   });
 
   const payload = {
     id: newUser._id,
   };
-  console.log(JWT_SECRET);
+  console.log("JWT_SECRET:", JWT_SECRET);
   const token = jwt.sign(payload, JWT_SECRET);
   console.log("token", token);
   await User.findByIdAndUpdate(newUser._id, { token });
@@ -32,10 +32,9 @@ const register = async (req, res, next) => {
   res.status(201).json({
     name,
     email,
-    // avatarURL: gravatar.url(email),   
+   
     token,
   });
- 
 };
 
 module.exports = register;

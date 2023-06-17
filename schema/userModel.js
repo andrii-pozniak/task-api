@@ -14,12 +14,7 @@ const userSchema = Schema(
       type: String,
       required: [true, "Set password for user"],
     },
-    
-    // avatarURL: {
-    //   type: String,
-    //   required: true,
-    // },   
-   
+
     token: {
       type: String,
     },

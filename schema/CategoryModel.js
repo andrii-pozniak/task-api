@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const taskSchema = new Schema({
+const categorySchema = new Schema({
   name: {
     type: String,
     minLength: 2,
@@ -10,12 +10,12 @@ const taskSchema = new Schema({
       "Only letters can be accepted",
     ],
     required: [true, "Name is required"],
-    default: "Task",
+    default: "Category",
   },
   dataStart: Date,
   dataEnd: Date,
 });
 
-const Task = model("task", taskSchema);
+const Category = model("category", categorySchema);
 
-module.exports = { Task };
+module.exports = { Category };
