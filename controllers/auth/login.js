@@ -2,10 +2,7 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const { User } = require("../../schema/userModel");
-// require("dotenv").config();
 const JWT_SECRET = process.env.JWT_SECRET;
-// const JWT_SECRET = "qwertyuiop[";
-
 
 const login = async (req, res) => {
   const { email, password } = req.body;

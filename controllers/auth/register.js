@@ -1,7 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const { User } = require("../../schema/userModel");
-// const JWT_SECRET = "qwertyuiop[";
 require("dotenv").config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
@@ -18,21 +17,18 @@ const register = async (req, res, next) => {
     name,
     email,
     password: hashPassword,
-   
   });
 
   const payload = {
     id: newUser._id,
   };
-  console.log("JWT_SECRET:", JWT_SECRET);
   const token = jwt.sign(payload, JWT_SECRET);
-  console.log("token", token);
   await User.findByIdAndUpdate(newUser._id, { token });
 
   res.status(201).json({
     name,
     email,
-   
+
     token,
   });
 };

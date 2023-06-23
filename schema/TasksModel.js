@@ -14,6 +14,14 @@ const taskSchema = new Schema({
   },
   dataStart: Date,
   dataEnd: Date,
+  id: {
+    type: String,
+    required: [true, "CategoryId is required"],   
+  },
+  description: {
+    type: String,
+    required: [true, "Description is required"],  
+  },
 });
 
 const Task = model("task", taskSchema);

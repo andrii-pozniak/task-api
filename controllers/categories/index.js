@@ -1,12 +1,11 @@
 const getAllCategories = require("./getAllCategories");
-// const getProductByCategory = require("./getProductByCategory");
-// const getProductsByAdditionalCategory = require("./getProductsByAdditionalCategory");
+const deleteCategory = require("./deleteCategory");
+const updateCategory = require("./updateCategory");
 const addCategory = require("./addCategory");
 
 module.exports = {
   addCategory,
-  //   getProductsById,
   getAllCategories,
-  //   getProductByCategory,
-  //   getProductsByAdditionalCategory,
+  deleteCategory, 
+  updateCategory
 };

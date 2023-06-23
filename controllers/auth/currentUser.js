@@ -1,4 +1,4 @@
-const currentUser = async (req, res, next) => {
+const currentUser = async (req, res, ) => {
     const { name, email,  } =
       req.user;
   

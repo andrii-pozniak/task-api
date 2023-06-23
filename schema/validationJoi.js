@@ -7,6 +7,8 @@ const joiTaskAddSchema = Joi.object({
   name: Joi.string().min(2),
   dataStart: Date,
   dataEnd: Date,
+  id: Joi.string(),
+  description: Joi.string()
 });
 
 const joiCategoryAddSchema = Joi.object({

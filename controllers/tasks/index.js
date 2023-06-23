@@ -1,13 +1,11 @@
-// const getProductsById = require("./getProductsById");
 const getAllTasks = require("./getAllTasks");
-// const getProductByCategory = require("./getProductByCategory");
-// const getProductsByAdditionalCategory = require("./getProductsByAdditionalCategory");
 const addTask = require("./addTask");
+const updateTask = require("./updateTask");
+const deleteTask = require("./deleteTask");
 
 module.exports = {
-    addTask,
-//   getProductsById,
+  addTask,
+  updateTask,
   getAllTasks,
-//   getProductByCategory,
-//   getProductsByAdditionalCategory,
+  deleteTask,
 };
