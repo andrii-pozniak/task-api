@@ -30,7 +30,6 @@
     "start:dev": "nodemon",
     
     "test": "react-scripts test",
-    "lint:js": "eslint src/**/*.{js,jsx}",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
